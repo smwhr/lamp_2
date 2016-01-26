@@ -37,4 +37,4 @@ Un as vaut 11 par défaut. Si le joueur a dépassé 21, alors l'as vaut 1.
 
 Contraintes
 -----------
-La page ne doit pas renvoyer la requête POST
+La page ne doit pas renvoyer la requête POST au refresh de la page
