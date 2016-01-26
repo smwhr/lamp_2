@@ -15,6 +15,8 @@ Si elle dépasse 21, elle perd
 
 Ex 2 : Implémenter une classe pour enregistrer l'état du jeu
 
+Ex 2bis : Pouvoir recommencer un jeu lorsqu'on a perdu !
+
 Ex 3 : Mettre en place un formulaire pour qu'un joueur puisse décider  
 Le joueur se voit distribué 2 cartes  
 Il peut décider d'en tirer une ou de s'arrêter  
