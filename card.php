@@ -67,14 +67,20 @@ class Player{
       $this->pseudo = $toto;
   }
 
-  public function take($cards){
+  public function take($cards){ //$cards = [Card,Card]
     //TODO : récupère les cartes passées en paramètre
-    //et les place dans $this->hand
+    //et les place dans $this->hand'
+    foreach($cards as $card){
+      $this->hand[] = $card;
+    }
   }
 
   public function getHandValue(){
-    //TODO : compter et returner la somme des valeurs de la main de la personne
-    return 22;
+    $panier = 0;
+    foreach($this->hand as $card){
+      $panier += $card->getValue();
+    }
+    return $panier;
   }
 
 }
@@ -91,14 +97,16 @@ $deck = new Deck();
 $deck->shuffle();
 $bank = new Bank();
 
-$bank->take($deck->deal(2)); //tire 2 cartes du deck, la banque les prends
+$bank->take($deck->deal(2)); 
+//tire 2 cartes du deck, la banque les prends
 
 while( $bank->getHandValue() < 17){
+  //tant que la banque a moins de 17, elle tire
   $bank->take($deck->deal(1)); 
 }
 
 if($bank->getHandValue() > 21){
-  echo "La banque perd";
+  echo "La banque perd ".$bank->getHandValue();
 }else{
   echo "La banque a ".$bank->getHandValue();
 }
