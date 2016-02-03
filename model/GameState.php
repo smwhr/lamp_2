@@ -18,4 +18,8 @@ class GameState{
     $this->bank->take($this->deck->deal(2));
     $this->player->take($this->deck->deal(2));
   }
+
+  public function dealToPlayer(){
+    $this->player->take($this->deck->deal(1));
+  }
 }
