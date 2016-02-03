@@ -18,7 +18,7 @@
   ?>
  </ul>
 
-<form method="POST" action="play.php">
+<form method="POST" action="./play.php">
   <input type="submit"
          name="player_action" 
          value="hit" >

@@ -19,4 +19,4 @@ if($_POST['player_action'] == "hit"){
 }
 
 header("Location: ./index.php");
-  exit;
+exit;
