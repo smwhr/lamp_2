@@ -20,6 +20,8 @@ class GameState{
   }
 
   public function dealToPlayer(){
-    $this->player->take($this->deck->deal(1));
+    $newCard = $this->deck->deal(1);
+    $this->player->take($newCard);
+    return $newCard[0];
   }
 }
