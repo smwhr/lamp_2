@@ -14,6 +14,7 @@ class GameState{
     $this->deck = new Deck();
   }
   public function initialDeal(){
+    $this->deck->shuffle();
     $this->bank->take($this->deck->deal(2));
     $this->player->take($this->deck->deal(2));
   }
