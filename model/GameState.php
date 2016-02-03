@@ -13,4 +13,8 @@ class GameState{
     $this->bank = new Bank();
     $this->deck = new Deck();
   }
+  public function initialDeal(){
+    $this->bank->take($this->deck->deal(2));
+    $this->player->take($this->deck->deal(2));
+  }
 }

@@ -26,6 +26,11 @@
          name="player_action" 
          value="stand" >
 </form>
+<form method="POST" action="index.php">
+<input type="submit"
+         name="reset" 
+         value="reset" >
+</form>
   
 </body>
 </html>
